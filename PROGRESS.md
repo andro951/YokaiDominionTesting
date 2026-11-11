@@ -1,13 +1,16 @@
-# Testing progress
+# Testing progress - engineering milestone 001
 
-## Observed results
-- Production baseline 9437302ce6353d6a3006d73e4ad0c9feaa473e59 passed 18 checks on Windows and Linux (run 42955998709).
-- Production initial Godot fixture 8a97326999b7ad1de1a1d6c3719a13962bd114a9 compiled, ran headlessly and produced an inspected engine screenshot (run 42956320270).
-- The first material was visibly too compressible. Testing commit 20ada9ecae58144b6b9b974a196f7b2aca588140 ran the one-variable study against production ec943fc6301626a424d5d198736b5032710afdc1 (run 42957245209). Selected measured results are retained in results/material-sweep-initial.json.
-- Production 146f48c2089630680656009fb8f16634e0653f16 passed the full 27-check suite (18 core + 9 advanced) on Windows and Linux in run 42957968022, after correcting two target-typed argument ambiguities. Assertions were not loosened.
+## Observed evidence
+- Production current numerical core at e9705b8bb049975cf3e4fe2b4b019938ebbe232e passed 18 core plus 9 advanced checks on Windows and Linux (production run 42958865072).
+- Godot lab at adaaf334b7a0d623857fd3dac4a4ae2db35c1fa7 compiled, ran headlessly, and produced an inspected software-rendered frame (run 42958219773). Its jump fixture had about 2.91% peak local volume change, 1.16% at the endpoint, and no inverted elements.
+- Blender-to-native-Godot asset path at e9705b8bb049975cf3e4fe2b4b019938ebbe232e passed structural export checks and imported animation sampling in headless/rendered modes (run 42958864946). The rendered bent limb was inspected. This is a calibration asset, not the character.
+- Independent testing revision b1d86c4ac241ba50b2a2ba2910e3d94689369084 passed all 27 production checks and the material sweep against its pinned production revision (testing run 42958498338).
 
-## Current checkpoint
-Pinned production now includes the native asset-import fix that merges bone and morph animation into a single exported clip. This testing workflow runs all 27 production checks plus the material sweep and archives both exact source trees. Its own result must still be observed after submission.
+## Retained experiment
+results/material-sweep-initial.json records exact selected measurements from testing run 42957245209. Varying only Poisson ratio reduced peak local volume error from roughly 30.72% at 0.48 to 2.91% at 0.499. No inverted or non-finite samples occurred. This is fixture characterization, not biological material fitting.
 
-## Still not established
-No final character geometry or anatomical calibration; no end-to-end full-body animation/tissue interaction; no triangle self-contact or CCD; no clothing restraint; no target-PC GPU measurement. The numerical material experiment is not a biological validation study.
+## Current pin
+production.ref now points to bb049bc1a7ea63b6424380db25cd76cbd9cd8156, the production documentation/evidence handoff after verified code revision e9705b8. The current testing run is submitted by this commit and must be observed rather than assumed successful. Its artifacts include both exact source trees and all current numerical reports.
+
+## Next work and limitations
+Original-reference body proportions, early full-body deformation rig, character-specific tissue regions and graded attachments are next. Final anatomy, skin layers, cloth support, hair/tail physics, full-body animations/ragdoll, robust self/continuous contact and target-GPU performance are not established. Full reference images are identified by exact hashes in production; bytes are preserved in the conversation/handoff archive rather than committed via the text connector.
