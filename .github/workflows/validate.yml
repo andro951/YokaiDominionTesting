@@ -1,0 +1,35 @@
+name: Validate pinned production revision
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: validation-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read immutable production pin
+        id: pin
+        shell: bash
+        run: |
+          ref="$(tr -d '\r\n' < production.ref)"
+          [[ "$ref" =~ ^[0-9a-f]{40}$ ]] || { echo 'production.ref must contain a full commit SHA'; exit 1; }
+          echo "sha=$ref" >> "$GITHUB_OUTPUT"
+          echo "Testing YokaiDominion commit $ref" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/checkout@v4
+        with:
+          repository: andro951/YokaiDominion
+          ref: ${{ steps.pin.outputs.sha }}
+          path: production
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Run production numerical checks
+        working-directory: production
+        run: dotnet run --project tests/Yokai.Tissue.Checks -c Release
