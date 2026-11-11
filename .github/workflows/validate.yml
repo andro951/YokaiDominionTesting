@@ -32,15 +32,28 @@ jobs:
           dotnet-version: '10.0.x'
       - name: Run production numerical checks
         working-directory: production
+        env:
+          YOKAI_SOURCE_REVISION: ${{ steps.pin.outputs.sha }}
         run: dotnet run --project tests/Yokai.Tissue.Checks -c Release
+      - name: Run rotation and volume regression checks
+        working-directory: production
+        env:
+          YOKAI_SOURCE_REVISION: ${{ steps.pin.outputs.sha }}
+        run: dotnet run --project tests/Yokai.Tissue.AdvancedChecks -c Release
       - name: Characterize volume response with one changed parameter
         run: dotnet run --project scenarios/MaterialSweep -c Release
+      - name: Archive exact source pair
+        if: always()
+        run: |
+          mkdir -p artifacts
+          git archive --format=zip --output=artifacts/testing-source.zip HEAD
+          git -C production archive --format=zip --output="$GITHUB_WORKSPACE/artifacts/production-source.zip" HEAD
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: pinned-validation
           path: |
             artifacts/
-            production/artifacts/core-results.json
+            production/artifacts/*-results.json
           if-no-files-found: warn
           retention-days: 14

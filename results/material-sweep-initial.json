@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "kind": "Selected measured results retained from a completed CI artifact",
+  "productionCommit": "ec943fc6301626a424d5d198736b5032710afdc1",
+  "testingCommit": "20ada9ecae58144b6b9b974a196f7b2aca588140",
+  "workflowRun": 42957245209,
+  "youngModulusPa": 6500,
+  "densityKgM3": 1000,
+  "durationSeconds": 5,
+  "physicsHz": 120,
+  "substeps": 4,
+  "iterations": 5,
+  "tetrahedra": 162,
+  "results": [
+    {"poissonRatio": 0.48, "peakRelativeVolumeError": 0.3072324889093305, "finalRelativeVolumeError": 0.11384853318293864, "invertedElementSamples": 0, "finite": true},
+    {"poissonRatio": 0.49, "peakRelativeVolumeError": 0.19514245322352441, "finalRelativeVolumeError": 0.06787334984286852, "invertedElementSamples": 0, "finite": true},
+    {"poissonRatio": 0.495, "peakRelativeVolumeError": 0.1170069515897667, "finalRelativeVolumeError": 0.04285766521424206, "invertedElementSamples": 0, "finite": true},
+    {"poissonRatio": 0.499, "peakRelativeVolumeError": 0.029068142807211483, "finalRelativeVolumeError": 0.011593039377213232, "invertedElementSamples": 0, "finite": true}
+  ],
+  "interpretation": "Choose 0.499 for this fixture and gate peak below 5%, final below 2%. Not anatomical calibration, mesh convergence, or target hardware validation."
+}
