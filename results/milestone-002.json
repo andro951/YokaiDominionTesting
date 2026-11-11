@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "productionHandoffCommit": "59751f5ad9ea17b9a0e325a523c9798a5f597330",
+  "assetSourceCommit": "95af2eb3f902dac56705f4b6d51f16589a8d8787",
+  "runtimeSourceCommit": "409ae5f39de720bb12e36cb82050825975f596a9",
+  "assetWorkflowRun": 42971187686,
+  "runtimeWorkflowRun": 42973867993,
+  "coreWorkflowRun": 42973868017,
+  "glbSha256": "f66da485c5d5fe62f02ecc7b905cfd6baffff055fd299d8a5935eb288cc17850",
+  "bodySourceVertices": 13380,
+  "bodyExportVertices": 14517,
+  "bodyTriangles": 26756,
+  "skeletonJoints": 176,
+  "boundSurfaceVertices": 5984,
+  "generalChecksWindowsAndLinux": 27,
+  "fixture": {
+    "simulationSeconds": 4,
+    "ticks": 240,
+    "regionCount": 4,
+    "nodesPerRegion": 125,
+    "tetrahedraPerRegion": 384,
+    "substeps": 16,
+    "iterations": 16,
+    "breastPeakLocalVolumeError": 0.0419463101271611,
+    "glutePeakLocalVolumeError": 0.025083539037585423,
+    "peakSurfaceDisplacementM": 0.105386466,
+    "maxRestSkinTransformErrorM": 0.00008494834,
+    "inversions": 0,
+    "nativeSkinFallbackPassed": true,
+    "allFourRegionsBelowProvisionalFivePercentVolumeGoal": true
+  },
+  "colourCalibration": {"renderer": "gl_compatibility", "skinSwatchError": 0, "maximumChannelError": 0.007843137, "allowedChannelError": 0.011764706, "passed": true},
+  "independentGlbAudit": {
+    "structuralPassed": true,
+    "poseMetrics": [
+      {"pose": "neutral", "edgeStretchP999": 1.0000379065977891, "maxEdgeStretch": 1.0000780287439857, "edgeEntriesOver4x": 0},
+      {"pose": "overhead", "edgeStretchP999": 3.2183506864580704, "maxEdgeStretch": 7.8226653442892164, "edgeEntriesOver4x": 48},
+      {"pose": "crouch", "edgeStretchP999": 1.8314051742587996, "maxEdgeStretch": 3.1236040959286253, "edgeEntriesOver4x": 0},
+      {"pose": "high-kick", "edgeStretchP999": 1.5458057444767292, "maxEdgeStretch": 3.81444683397128, "edgeEntriesOver4x": 0},
+      {"pose": "twist", "edgeStretchP999": 1.5019852021122684, "maxEdgeStretch": 4.411390698733722, "edgeEntriesOver4x": 4},
+      {"pose": "jump", "edgeStretchP999": 2.2984058226638515, "maxEdgeStretch": 4.9245584367447615, "edgeEntriesOver4x": 8},
+      {"pose": "knockdown", "edgeStretchP999": 1.239034010799566, "maxEdgeStretch": 2.3114454251676713, "edgeEntriesOver4x": 0},
+      {"pose": "recover", "edgeStretchP999": 1.0007215157942175, "maxEdgeStretch": 1.004340550982677, "edgeEntriesOver4x": 0}
+    ],
+    "edgesCountedAsTriangleEntries": true,
+    "minimumRestEdgeLengthM": 0.002,
+    "shoulderQualityAccepted": false
+  },
+  "installerChecks": {"install": true, "idempotence": true, "refuseDifferentOverwrite": true, "explicitForce": true},
+  "overallAcceptance": "Integration milestone only. Final art, deformation, contact, anatomical calibration and target-PC performance remain unaccepted."
+}
