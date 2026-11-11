@@ -33,3 +33,14 @@ jobs:
       - name: Run production numerical checks
         working-directory: production
         run: dotnet run --project tests/Yokai.Tissue.Checks -c Release
+      - name: Characterize volume response with one changed parameter
+        run: dotnet run --project scenarios/MaterialSweep -c Release
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pinned-validation
+          path: |
+            artifacts/
+            production/artifacts/core-results.json
+          if-no-files-found: warn
+          retention-days: 14
