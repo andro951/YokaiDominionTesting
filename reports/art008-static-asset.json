@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "scope": "Art008 static visual asset, not animation or physics acceptance",
+  "productionSource": "d8369726ff15fa40efaea69aedb2e1cf703635e6",
+  "master": {
+    "assetCommit": "980b464ba9ade3f4d72e279c981f38729e68490b",
+    "path": "art/checkpoints/finish008/9c869a359e9b/Character01_Finish008.blend",
+    "bytes": 17358317,
+    "sha256": "3344fd9706024a8ee5f903472de93333191d78a8ec32c5759dc53467cf3a07e3",
+    "workflowRun": 43159974137,
+    "remoteReadbackAndReopen": true
+  },
+  "portable": {
+    "assetCommit": "4bec672d1e7836dec2d0db141ff6236e3c722395",
+    "directory": "art/checkpoints/portable008/e8a6f76486e9/",
+    "workflowRun": 43160875654,
+    "glb": {"file": "Character01_Visual008.glb", "bytes": 40972612, "sha256": "bf422fa4e363f9eb4a04fbc2bb9cb306469fdcbba60123bccdd365203e0856f9"},
+    "pbrBlend": {"file": "Character01_PBR008.blend", "bytes": 44944349, "sha256": "08239fda16dcc8ae3b82523ba28e806b3b3bd3535140e96dc0e3047cab8a1fd5"},
+    "allCommittedTextureHashesMatched": true,
+    "blenderReimportAndRenderInspected": true,
+    "triangles": 511676,
+    "verticesIncludingAttributeSeams": 300250,
+    "meshObjects": 289,
+    "materials": 14,
+    "embeddedImages": 16,
+    "externalImageOrBufferUris": 0,
+    "skins": 0,
+    "animations": 0,
+    "finiteGeometry": true,
+    "indicesInBounds": true,
+    "nonUnitNormalsAtOnePercentTolerance": 0,
+    "bodyAtlasSourceArea": 0.6058538263205935,
+    "bodyAtlasPortableArea": 0.5992580076494641,
+    "bodyFacesSampledForColorCoverage": 135488,
+    "unbakedFraction": 0.0,
+    "alphaHair": {"mode": "MASK", "cutoff": 0.3, "doubleSided": true}
+  },
+  "independentChatContainerVerification": {
+    "artifactDigestsMatched": true,
+    "modelAndTextureHashesMatched": true,
+    "masterAndPbrBlendReopenedInBlender453": true,
+    "allSixCord007ModifiersRetained": true,
+    "usedImageDependenciesAvailableOrPacked": true
+  },
+  "notClaimed": ["User-approved final likeness", "New replacement rig or skin weights", "New motion set", "Soft tissue or cloth physics on this mesh", "Production MOBA LOD", "Target hardware performance", "Identical rendering in every engine"]
+}
